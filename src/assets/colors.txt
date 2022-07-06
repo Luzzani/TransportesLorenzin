@@ -1,0 +1,13 @@
+paleta de colores 1 
+#0C124F azul
+#99583B marron
+#BD9072 marron claro
+#C9BFB7 beige
+#E4E2DB gris
+
+paleta de colores 2
+#0E3663 azul
+#5978A9 azul claro
+#B3B3BD gris
+#6CA589 verde claro
+#0B5D37 verde oscuro 

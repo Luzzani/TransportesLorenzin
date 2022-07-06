@@ -1,0 +1,75 @@
+#clients > h2 {
+    padding-top: 7rem;
+}
+
+.container.clients__container {
+    margin-top: 10rem;
+    width: 40%;
+    padding-bottom: 4rem;
+}
+
+.client__avatar {
+    width: 4rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+}
+
+.client {
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    user-select: none;
+}
+
+.client__review {
+    color: var(--color-light);
+    font-weight: 300;
+    display: block;
+    width: 80%;
+    margin: .3rem auto 0;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    background: var(--color-primary);
+}
+
+.clients__logos {
+    position: relative;
+    top: 200px;
+    display: flex;
+    
+}
+
+.clients__logos .client__logo {
+    width: 6rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+}
+
+/* ------------- MEDIA QUERIES (MEDIUM DEVICES) ------------- */
+
+@media screen and (max-width: 1024px) {
+    .container.clients__container {
+        width: 60%;
+    }
+}
+
+/* ------------- MEDIA QUERIES (SMALL DEVICES) ------------- */
+
+@media screen and (max-width: 600px) {
+    .container.clients__container {
+        width: var(--container-width-sm)
+    }
+
+    .client__review {
+        width: var(--container-width-sm);
+    }
+    .clients__logos {
+        top: 100px;
+    }
+}

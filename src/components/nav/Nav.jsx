@@ -13,7 +13,7 @@ function Nav() {
       <div className="navbar__logo">
         <a href="#home">
           <AiOutlineDribbble />
-          <small>Transporte Lorenzin</small>
+          <small>Logistica Lorenzin</small>
         </a>
       </div>
       <div className="navbar__links">

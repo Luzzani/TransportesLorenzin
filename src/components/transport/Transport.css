@@ -1,6 +1,7 @@
 .transport__title {
+    color: var(--color-white);
     padding: 8rem;
-    background: #fff;
+    background: var(--color-primary)
 }
 
 .transport__container {
@@ -20,7 +21,8 @@
     border-radius: 2rem;
     overflow: hidden;
 }
-.transport__us-image img{
+
+.transport__us-image img {
     height: 100%;
 }
 
@@ -54,11 +56,11 @@
 
 @media screen and (max-width: 1024px) {
     .transport__title {
-        padding: 0;
-        background: #fff;
+        padding: 4rem;
         position: relative;
         top: -30px;
     }
+
     .transport__container {
         grid-template-columns: 1fr;
     }
@@ -68,11 +70,14 @@
 
 @media screen and (max-width: 600px) {
     .transport__title {
-        font-size: 1.2rem;
+        padding: 2rem;
+        font-size: 1rem;
     }
+
     .transport__us {
         width: 100%;
     }
+
     .transport__cards {
         grid-template-columns: 1fr;
     }

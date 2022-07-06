@@ -38,7 +38,7 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: var(--color-bg);
+  background: linear-gradient(#C9BFB7,#E4E2DB );
   color: var(--color-white);
   line-height: 1.7;
   background-size: cover;
@@ -64,7 +64,7 @@ h1 {
 }
 
 section {
-  margin-top: 8rem;
+  margin-top: 4rem;
   height: 100vh;
 }
 

@@ -1,5 +1,7 @@
 #clients>h2 {
-    padding-top: 7rem;
+    color: var(--color-white);
+    padding: 8rem;
+    background: var(--color-primary)
 }
 
 .container.clients__container {
@@ -38,9 +40,8 @@
 
 .clients__logos {
     position: relative;
-    top: 200px;
+    top: 150px;
     display: flex;
-
 }
 
 .clients__logos .client__logo {
@@ -55,14 +56,28 @@
 /* ------------- MEDIA QUERIES (MEDIUM DEVICES) ------------- */
 
 @media screen and (max-width: 1024px) {
+    #clients>h2 {
+        padding: 4rem;
+        position: relative;
+        top: 100px;
+    }
+
     .container.clients__container {
         width: 60%;
     }
+    .clients__logos {
+        top: 100px;
+    }
 }
-
 /* ------------- MEDIA QUERIES (SMALL DEVICES) ------------- */
 
 @media screen and (max-width: 600px) {
+    #clients>h2 {
+        padding: 2rem;
+        top: 125px;
+        font-size: 1rem;
+    }
+
     .container.clients__container {
         width: var(--container-width-sm)
     }

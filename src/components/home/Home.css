@@ -162,6 +162,9 @@
     /* ------------- MEDIA QUERIES (SMALL DEVICES) ------------- */
 
     @media screen and (max-width: 600px) {
+        .home__container{
+            gap: 20px;
+        }
         .home__container h1 {
             font-size: 1rem;
         }

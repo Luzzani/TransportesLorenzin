@@ -1,4 +1,4 @@
-#clients > h2 {
+#clients>h2 {
     padding-top: 7rem;
 }
 
@@ -40,7 +40,7 @@
     position: relative;
     top: 200px;
     display: flex;
-    
+
 }
 
 .clients__logos .client__logo {
@@ -49,6 +49,7 @@
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto 1.5rem;
+    background: var(--color-light);
 }
 
 /* ------------- MEDIA QUERIES (MEDIUM DEVICES) ------------- */
@@ -69,7 +70,12 @@
     .client__review {
         width: var(--container-width-sm);
     }
+
     .clients__logos {
         top: 100px;
+    }
+
+    .clients__logos .client__logo {
+        width: 4rem;
     }
 }

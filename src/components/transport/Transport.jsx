@@ -1,5 +1,6 @@
 import './Transport.css';
 import React from "react";
+import img from '../../assets/secondFoto.jpg';
 
 function Transport() {
   return (
@@ -10,7 +11,7 @@ function Transport() {
         <div className="transport__us">
           <div className="transport__us-image">
             <img
-              src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ideas-para-hacer-mudanza-getty-images-4-1531829636.jpg?crop=1.00xw:0.878xh;0,0.0783xh&resize=980:*"
+              src={img}
               alt="dibujo camioneta"
             />
           </div>

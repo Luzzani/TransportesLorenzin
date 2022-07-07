@@ -1,3 +1,5 @@
+import { useInView } from 'react-intersection-observer';
+
 import React from "react";
 import "./Contact.css";
 import { HiOutlineMail } from "react-icons/hi";
@@ -9,6 +11,9 @@ import emailjs from "emailjs-com";
 const blank = "_blank";
 
 const Contact = () => {
+  const { ref: myRef, inView: myElementIsVisible } = useInView();
+  const { ref: myRef2, inView: myElementIsVisible2 } = useInView();
+
   const [emailInput, setEmailInput] = useState("");
   const [nameInput, setNameInput] = useState("");
   const [textInput, setTextInput] = useState("");
@@ -49,11 +54,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact">
-      <h2>Contacto</h2>
+    <section id="contact" ref={myRef}>
+      <h2 className={`contact__title ${myElementIsVisible ? 'animation__contact' : ''}`}>Contacto</h2>
 
-      <div className="container contact__container">
-        <div className="contact__options">
+      <div className="container contact__container" ref={myRef2}>
+        <div className={`contact__options ${myElementIsVisible2 ? 'animation__contact' : ''}`}>
           <article className="contact__option">
             <HiOutlineMail className="contact__option-icon" />
             <h4>Email</h4>
@@ -80,7 +85,7 @@ const Contact = () => {
           </article>
         </div>
 
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail} className={`contact__form ${myElementIsVisible2 ? 'animation__contact' : ''}`}>
           <input
             onChange={changeNameInput}
             type="text"

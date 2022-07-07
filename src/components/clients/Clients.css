@@ -4,6 +4,11 @@
     background: var(--color-primary)
 }
 
+.clients__title {
+    opacity: 0;
+    transition: all 2s;
+}
+
 .container.clients__container {
     margin-top: 10rem;
     width: 40%;
@@ -19,11 +24,13 @@
 }
 
 .client {
+    opacity: 0;
     background-color: var(--color-primary);
     text-align: center;
     padding: 2rem;
     border-radius: 2rem;
     user-select: none;
+    transition: all 2s;
 }
 
 .client__review {
@@ -52,6 +59,22 @@
     margin: 0 auto 1.5rem;
     background: var(--color-light);
 }
+
+.animation__clients {
+    opacity: 1;
+    animation: mostrarArriba 2s;
+}
+
+@keyframes mostrarArriba{
+    0% {
+        transform: translateY(200px);
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
 /* ------------- MEDIA QUERIES (MEDIUM DEVICES) ------------- */
 

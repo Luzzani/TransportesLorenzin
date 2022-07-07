@@ -1,3 +1,6 @@
+import { useInView } from 'react-intersection-observer';
+
+
 import React from "react";
 import "./Clients.css";
 import AVATAR from '../../assets/avatar.jpg'
@@ -39,10 +42,13 @@ const data = [
 ]
 
 const Clients = () => {
-  return (
-    <section id="clients">
-      <h2>Clientes que confian en nosotros</h2>
+  const { ref: myRef, inView: myElementIsVisible } = useInView();
+  const { ref: myRef2, inView: myElementIsVisible2 } = useInView();
 
+  return (
+    <section id="clients" ref={myRef}>
+      <h2 className={`clients__title ${myElementIsVisible ? 'animation__clients' : ''}`}>Clientes que confian en nosotros</h2>
+      <div  ref={myRef2}>
       <Swiper className="container clients__container"
       // install Swiper modules
       modules={[Pagination]}
@@ -53,7 +59,7 @@ const Clients = () => {
       {
         data.map(({avatar, name, review}, index) => {
           return(
-            <SwiperSlide keyy={index} className="client">
+            <SwiperSlide key={index} className={`client ${myElementIsVisible2 ? 'animation__clients' : ''}`}>
             <div className="client__avatar">
               <img src={avatar} alt="client avatar" />
             </div>
@@ -66,7 +72,8 @@ const Clients = () => {
         })
       }
       </Swiper>
-      <div className="clients__logos">
+      </div>
+      <div className={`clients__logos ${myElementIsVisible2 ? 'animation__clients' : ''}`}>
         <div className="client__logo"><img src={logo1} alt="dummy logo" /></div>
         <div className="client__logo"><img src={logo2} alt="dummy logo" /></div>
         <div className="client__logo"><img src={logo3} alt="dummy logo" /></div>

@@ -1,7 +1,9 @@
 .transport__title {
+    opacity: 0;
     color: var(--color-white);
     padding: 8rem;
-    background: var(--color-primary)
+    background: var(--color-primary);
+    transition: all 2s;
 }
 
 .transport__container {
@@ -11,8 +13,10 @@
 }
 
 .transport__us {
+    opacity: 0;
     width: 100%;
     aspect-ratio: 1/1;
+    transition: all 2s;
 }
 
 .transport__us-image {
@@ -27,9 +31,11 @@
 }
 
 .transport__cards {
+    opacity: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    transition: all 2s;
 }
 
 .transport__card {
@@ -50,6 +56,21 @@
 
 .transport__card:hover {
     background: var(--color-secondary);
+}
+
+.animation__transport {
+    opacity: 1;
+    animation: mostrarArriba 2s;
+}
+
+@keyframes mostrarArriba{
+    0% {
+        transform: translateY(200px);
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* ------------- MEDIA QUERIES (MEDIUM DEVICES) ------------- */

@@ -41,7 +41,7 @@ const data = [
 const Clients = () => {
   return (
     <section id="clients">
-      <h2>Algunos testimonios de nuestros clientes</h2>
+      <h2>Clientes que confian en nosotros</h2>
 
       <Swiper className="container clients__container"
       // install Swiper modules

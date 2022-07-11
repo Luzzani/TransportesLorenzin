@@ -1,19 +1,16 @@
-import { useInView } from 'react-intersection-observer';
-
-
-import React from "react";
+import React, { useRef } from "react";
 import "./Clients.css";
 import AVATAR from '../../assets/avatar.jpg'
 import logo1 from '../../assets/yummy-logos_transparent.png'
 import logo2 from '../../assets/meca-nics-logos_transparent.png'
 import logo3 from '../../assets/magicGamer-logos_transparent.png'
 import logo4 from '../../assets/builderSoft-logos_transparent.png'
-// import Swipper core and required module 
+import { useInView} from 'framer-motion';
+
 import { Pagination } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper Styles 
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -42,14 +39,31 @@ const data = [
 ]
 
 const Clients = () => {
-  const { ref: myRef, inView: myElementIsVisible } = useInView();
-  const { ref: myRef2, inView: myElementIsVisible2 } = useInView();
+  const ref = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const isInView2 = useInView(ref2, { once: true });
+  const isInView3 = useInView(ref3, { once: true });
+
 
   return (
-    <section id="clients" ref={myRef}>
-      <h2 className={`clients__title ${myElementIsVisible ? 'animation__clients' : ''}`}>Clientes que confian en nosotros</h2>
-      <div  ref={myRef2}>
+    <section id="clients">
+      <h2 className={`clients__title`}
+        ref={ref}
+        style={{
+          transform: isInView ? "none" : "translatex(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}>Clientes que confian en nosotros</h2>
+      <div>
       <Swiper className="container clients__container"
+         ref={ref2}
+         style={{
+           transform: isInView2 ? "none" : "translateY(200px)",
+           opacity: isInView2 ? 1 : 0,
+           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+         }}
       // install Swiper modules
       modules={[Pagination]}
       spaceBetween={40}
@@ -59,7 +73,7 @@ const Clients = () => {
       {
         data.map(({avatar, name, review}, index) => {
           return(
-            <SwiperSlide key={index} className={`client ${myElementIsVisible2 ? 'animation__clients' : ''}`}>
+            <SwiperSlide key={index} className={`client`}>
             <div className="client__avatar">
               <img src={avatar} alt="client avatar" />
             </div>
@@ -73,7 +87,13 @@ const Clients = () => {
       }
       </Swiper>
       </div>
-      <div className={`clients__logos ${myElementIsVisible2 ? 'animation__clients' : ''}`}>
+      <div className={`clients__logos`}
+          ref={ref3}
+          style={{
+            transform: isInView3 ? "none" : "translatex(200px)",
+            opacity: isInView3 ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}>
         <div className="client__logo"><img src={logo1} alt="dummy logo" /></div>
         <div className="client__logo"><img src={logo2} alt="dummy logo" /></div>
         <div className="client__logo"><img src={logo3} alt="dummy logo" /></div>

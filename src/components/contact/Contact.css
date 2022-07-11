@@ -4,10 +4,6 @@
     background: var(--color-primary)
 }
 
-.contact__title {
-    opacity: 0;
-    transition: all 2s;
-}
 
 .container.contact__container {
     width: 58%;
@@ -17,11 +13,9 @@
 }
 
 .contact__options {
-    opacity: 0;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    transition: all 2s;
 }
 
 .contact__option {
@@ -33,10 +27,6 @@
     transition: var(--transition);
 }
 
-.contact__form {
-    opacity: 0;
-    transition: all 2s;
-}
 .contact__option a{
         color: var(--color-secondary);
 }
@@ -73,21 +63,6 @@ input, textarea {
     border: 2px solid var(--color-primary);
     resize: none;
     color: var(--color-primary);
-}
-
-.animation__contact {
-    opacity: 1;
-    animation: mostrarArriba 2s;
-}
-
-@keyframes mostrarArriba{
-    0% {
-        transform: translateY(200px);
-    }
-    
-    100% {
-        transform: translateY(0);
-    }
 }
 
 /* ------------- MEDIA QUERIES (MEDIUM DEVICES) ------------- */

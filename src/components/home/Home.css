@@ -13,6 +13,7 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
 .home__container h1,
@@ -28,13 +29,13 @@
 }
 
 .home__container h1 {
-    font-size: 2rem;
+    font-size: 3vw;
 }
 
 .home__container h2 {
     width: 60vw;
-    font-size: 1.2rem;
-    border-radius: 0 0 30px 30px;
+    font-size: 1.5rem;
+    border-radius: 30px 30px 30px 30px;
     margin: 0;
 }
 
@@ -46,15 +47,11 @@
 
 .home__button-gmail {
     position: relative;
-    animation-name: gmailAnimation;
-    animation-duration: 2s;
 }
 
 .home__button-whatsapp {
     position: relative;
     left: 20px;
-    animation-name: wspAnimation;
-    animation-duration: 2s;
     order: 1;
 }
 
@@ -64,67 +61,9 @@
     border-radius: 20px;
     height: 23px;
     position: relative;
-    animation-name: subAnimation;
-    animation-duration: 8s;
     color: var(--color-bg-variant);
     background: rgba(0, 0, 0, 0.76);
 }
-
-
-@keyframes textAnimation {
-    from {
-        left: -100vw;
-        opacity: 0;
-    }
-
-    to {
-        left: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes gmailAnimation {
-    0% {
-        top: -100vw;
-        opacity: 0;
-    }
-
-    50% {
-        transform: rotate(360deg);
-    }
-
-    100% {
-        top: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes wspAnimation {
-    0% {
-        right: -100vw;
-        opacity: 0;
-    }
-
-    90% {
-        right: 2vw;
-    }
-
-    100% {
-        right: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes subAnimation {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
 
 
 /* ------------- MEDIA QUERIES (MEDIUM DEVICES) ------------- */
@@ -141,13 +80,10 @@
     .home__container h2 {
         width: 60vw;
         font-size: 1rem;
-        border-radius: 0 0 30px 30px;
-        margin: 0;
     }
 
     .home__buttons {
         flex-direction: column;
-
     }
 
     .home__buttons-subtitle {
@@ -158,6 +94,7 @@
         order: 0;
         left: -20px;
     }
+
     .home__button-gmail {
         order: 0;
         top: -68px;
@@ -169,15 +106,15 @@
 
 @media screen and (max-width: 600px) {
     .home__container {
-        gap: 20px;
+        gap: 3vw;
     }
 
     .home__container h1 {
-        font-size: 1rem;
+        font-size: .8rem;
     }
 
     .home__container h2 {
         width: 100%;
-        font-size: .8rem;
+        font-size: .6rem;
     }
 }

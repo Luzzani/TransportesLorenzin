@@ -102,8 +102,6 @@ const Contact = () => {
 
         <form ref={form} onSubmit={sendEmail}>
           <motion.input
-          whileFocus={{background: '#000'}}
-          transition={{duration: .5}}
             onChange={changeNameInput}
             type="text"
             name="name"

@@ -1,4 +1,5 @@
 import "./Home.css";
+import ButtonUp from "../UI/ButtonUp";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -57,6 +58,7 @@ function Home() {
 
   return (
     <section id="home">
+      <ButtonUp/>
       <div className="container home__container">
         <motion.div
           className="home__title"

@@ -5,7 +5,7 @@ import { RiMessengerLine } from "react-icons/ri";
 import { BsWhatsapp } from "react-icons/bs";
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import { useInView} from 'framer-motion';
+import { useInView, motion} from 'framer-motion';
 
 
 const blank = "_blank";
@@ -101,7 +101,9 @@ const Contact = () => {
         </div>
 
         <form ref={form} onSubmit={sendEmail}>
-          <input
+          <motion.input
+          whileFocus={{background: '#000'}}
+          transition={{duration: .5}}
             onChange={changeNameInput}
             type="text"
             name="name"

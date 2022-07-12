@@ -74,10 +74,14 @@
     }
 
     .home__container h1 {
+        margin: 0 auto;
+        width: 100%;
+        border-radius: 20px;
         font-size: 1.2rem;
     }
 
     .home__container h2 {
+        margin: 0 auto;
         width: 60vw;
         font-size: 1rem;
     }
@@ -106,15 +110,16 @@
 
 @media screen and (max-width: 600px) {
     .home__container {
-        gap: 3vw;
+        gap: 5vw;
     }
 
     .home__container h1 {
+        width: 80%;
         font-size: .8rem;
     }
-
+    
     .home__container h2 {
-        width: 100%;
+        width: 90%;
         font-size: .6rem;
     }
 }

@@ -144,24 +144,3 @@ img {
     margin-bottom: 2rem;
   }
 }
-
-/* ------------- ANIMADO ------------- */
-
-.animado {
-  opacity: 0;
-  transition: all .5s;
-}
-
-.mostrarArriba {
-  animation: mostrarArriba 1s;
-}
-
-@keyframes mostrarArriba{
-  0% {
-      transform: translateY(200px);
-  }
-  
-  100% {
-      transform: translateY(0);
-  }
-}

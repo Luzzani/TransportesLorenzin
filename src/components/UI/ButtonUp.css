@@ -20,4 +20,19 @@
 }
 
 
+/* ------------- MEDIA QUERIES (MEDIUM DEVICES) ------------- */
+
+@media screen and (max-width: 1024px) {
+    .button__up {
+        display: none;
+    }
+  }
+  
+  /* ------------- MEDIA QUERIES (SMALL DEVICES) ------------- */
+  
+  @media screen and (max-width: 600px) {
+
+  }
+  
+
 

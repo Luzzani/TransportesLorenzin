@@ -86,7 +86,7 @@ const Contact = () => {
             <h4>Messenger</h4>
             <h5>Logistica Lorenzin</h5>
             <a href="https://m.me/luzzanilucas" target={blank}>
-              Send a message
+              Envia un mensaje
             </a>
           </article>
 
@@ -95,7 +95,7 @@ const Contact = () => {
             <h4>Whatsapp</h4>
             <h5>115992-6483</h5>
             <a href="https://wa.me/5491159926483" target={blank}>
-              Send a message
+            Envia un mensaje
             </a>
           </article>
         </div>
@@ -126,7 +126,7 @@ const Contact = () => {
             value={textInput}
           ></textarea>
           <button type="submit" className="btn btn-primary">
-            Send Message
+          Envia un mensaje
           </button>
         </form>
       </div>

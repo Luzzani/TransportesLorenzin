@@ -23,15 +23,13 @@
 /* ------------- MEDIA QUERIES (MEDIUM DEVICES) ------------- */
 
 @media screen and (max-width: 1024px) {
-    .button__up {
-        bottom: 15%;
-    }
+   
   }
   
   /* ------------- MEDIA QUERIES (SMALL DEVICES) ------------- */
   
   @media screen and (max-width: 600px) {
-
+  
   }
   
 

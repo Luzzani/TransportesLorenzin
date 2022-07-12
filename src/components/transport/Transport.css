@@ -51,22 +51,7 @@
 .transport__card:hover {
     background: var(--color-secondary);
 }
-/*`
-.animation__transport {
-    opacity: 1;
-    animation: mostrarArriba 2s;
-}
 
-@keyframes mostrarArriba{
-    0% {
-        transform: translateY(200px);
-    }
-    
-    100% {
-        transform: translateY(0);
-    }
-}
-*/
 /* ------------- MEDIA QUERIES (MEDIUM DEVICES) ------------- */
 
 @media screen and (max-width: 1024px) {

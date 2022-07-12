@@ -70,6 +70,8 @@
 
 @media screen and (max-width: 1024px) {
     #home {
+        background-size: auto;
+        background-position: 40% 45%;
         height: 100vh;
     }
 
